@@ -14,7 +14,7 @@ const BookForm = () => {
   };
 
   return (
-    <div className="form">
+    <form className="form">
       <h1 className="newBook">ADD NEW BOOK</h1>
       <input type="text" name="bookTitle" onChange={onChange} required placeholder="Book Title" />
       <input type="text" name="bookAuthor" onChange={onChange} required placeholder="Name of the Author" />
@@ -25,7 +25,7 @@ const BookForm = () => {
         <option value="Others">Others</option>
       </select>
       <button type="submit" className="bookAddButton">Add Book</button>
-    </div>
+    </form>
   );
 };
 
