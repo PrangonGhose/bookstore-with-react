@@ -1,15 +1,15 @@
-/* eslint-disable react/prop-types */
 import React from 'react';
+import { useSelector } from 'react-redux';
 import Book from './Book';
 import BookForm from './BookForm';
 
-const Booklist = (props) => {
-  const { bookList } = props;
+const Booklist = () => {
+  const bookList = useSelector((state) => state.book);
 
   return (
     <div className="bookList">
       <ul>
-        {bookList.bookList.map((book) => (
+        {bookList.map((book) => (
           <Book
             key={book.bookId}
             book={book}
