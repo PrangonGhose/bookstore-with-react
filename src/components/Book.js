@@ -1,11 +1,18 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
+import { useDispatch } from 'react-redux';
+import { RemoveBook } from '../redux/books/books';
 
 const Book = (props) => {
   const { book } = props;
   const {
     bookId, bookGenre, bookName, bookAuthor,
   } = book;
+  const dispatch = useDispatch();
+
+  const removeBook = (bookId) => {
+    dispatch(RemoveBook(bookId));
+  };
 
   return (
     <div className="bookCard" id={bookId}>
@@ -17,7 +24,7 @@ const Book = (props) => {
         </div>
         <div className="button-section">
           <button type="submit">Comments</button>
-          <button type="submit">Remove</button>
+          <button type="submit" onClick={() => removeBook(bookId)}>Remove</button>
           <button type="submit">Edit</button>
         </div>
       </div>
