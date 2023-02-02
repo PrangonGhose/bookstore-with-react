@@ -1,30 +1,40 @@
-/* eslint-disable react/prop-types */
 import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { v4 } from 'uuid';
+import { AddBook } from '../redux/books/books';
 
 const BookForm = () => {
-  const [inputText, setInputText] = useState({
-    title: '',
-  });
+  const [bookName, setBookName] = useState('');
+  const [bookAuthor, setBookAuthor] = useState('');
 
-  const onChange = (e) => {
-    setInputText({
-      ...inputText,
-      [e.target.name]: e.target.value,
-    });
+  const newId = v4();
+  const dispatch = useDispatch();
+
+  const addBook = (e) => {
+    e.preventDefault();
+    const data = {
+      bookId: newId,
+      bookGenre: 'Science Fiction',
+      bookName,
+      bookAuthor,
+    };
+    setBookName('');
+    setBookAuthor('');
+    dispatch(AddBook(data));
   };
 
   return (
     <form className="form">
       <h1 className="newBook">ADD NEW BOOK</h1>
-      <input type="text" name="bookTitle" onChange={onChange} required placeholder="Book Title" />
-      <input type="text" name="bookAuthor" onChange={onChange} required placeholder="Name of the Author" />
+      <input type="text" name="bookTitle" value={bookName} onChange={(e) => setBookName(e.target.value)} required placeholder="Book Title" />
+      <input type="text" name="bookAuthor" value={bookAuthor} onChange={(e) => setBookAuthor(e.target.value)} required placeholder="Name of the Author" />
       <select name="bookGenre" className="bookGenreList">
         <option value="Action">Action</option>
         <option value="Science Fiction">Science Fiction</option>
         <option value="Economy">Economy</option>
         <option value="Others">Others</option>
       </select>
-      <button type="submit" className="bookAddButton">Add Book</button>
+      <button type="submit" className="bookAddButton" onClick={addBook}>Add Book</button>
     </form>
   );
 };
