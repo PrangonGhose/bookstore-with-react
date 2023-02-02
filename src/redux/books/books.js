@@ -1,15 +1,13 @@
 import { ADD_BOOK, REMOVE_BOOK } from '../constants';
 
-export const AddBook = (bookId, bookGenre, bookName, bookAuthor) => ({
+export const AddBook = (data) => ({
   type: ADD_BOOK,
-  data: {
-    bookId, bookGenre, bookName, bookAuthor,
-  },
+  data,
 });
 
 export const RemoveBook = (bookId) => ({
   type: REMOVE_BOOK,
-  data: { bookId },
+  data: bookId,
 });
 
 const bookReducer = (state = [], action) => {
@@ -20,7 +18,7 @@ const bookReducer = (state = [], action) => {
         action.data,
       ];
     case REMOVE_BOOK:
-      return state.filter((book) => book.bookId !== action.data.bookId);
+      return state.filter((book) => book.bookId !== action.data);
     default:
       return state;
   }
