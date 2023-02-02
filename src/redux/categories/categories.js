@@ -9,7 +9,6 @@ const bookCategoryReducer = (state = [], action) => {
   switch (action.type) {
     case CHECK_BOOK_CATEGORY:
       return [
-        ...state,
         action.data,
       ];
     default:
