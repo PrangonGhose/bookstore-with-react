@@ -10,7 +10,7 @@ const Main = () => (
         <Link to="/" className="logo">Bookstore CMS</Link>
       </h1>
       <nav>
-        <ul>
+        <ul className="header-list">
           <li><Link to="/" className="link">Books</Link></li>
           <li><Link to="/categories" className="link">Categories</Link></li>
         </ul>
