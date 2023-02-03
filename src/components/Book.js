@@ -23,9 +23,9 @@ const Book = (props) => {
           <h3 className="author">{bookAuthor}</h3>
         </div>
         <div className="button-section">
-          <button type="submit">Comments</button>
-          <button type="submit" onClick={() => removeBook(bookId)}>Remove</button>
-          <button type="submit">Edit</button>
+          <button type="submit" className="button">Comments</button>
+          <button type="submit" className="button line" onClick={() => removeBook(bookId)}>Remove</button>
+          <button type="submit" className="button line">Edit</button>
         </div>
       </div>
       <div className="column-2">
