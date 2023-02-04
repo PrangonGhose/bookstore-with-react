@@ -16,26 +16,39 @@ const Book = (props) => {
 
   return (
     <div className="bookCard" id={bookId}>
-      <div className="column-1">
-        <div className="bookDetail">
-          <h3 className="genre">{bookGenre}</h3>
-          <h1 className="title">{bookName}</h1>
-          <h3 className="author">{bookAuthor}</h3>
+      <div className="bookContent">
+        <div className="column-1">
+          <div className="bookDetail">
+            <h3 className="genre">{bookGenre}</h3>
+            <h1 className="title">{bookName}</h1>
+            <h3 className="author">{bookAuthor}</h3>
+          </div>
+          <div className="button-section">
+            <button type="submit" className="button">Comments</button>
+            <div className="line" />
+            <button type="submit" className="button" onClick={() => removeBook(bookId)}>Remove</button>
+            <div className="line" />
+            <button type="submit" className="button">Edit</button>
+          </div>
         </div>
-        <div className="button-section">
-          <button type="submit" className="button">Comments</button>
-          <button type="submit" className="button line" onClick={() => removeBook(bookId)}>Remove</button>
-          <button type="submit" className="button line">Edit</button>
+        <div className="column-2">
+          <div className="progress-load-div">
+            <div className="progress-load-circle" />
+          </div>
+          <div className="progress-percentage">
+            <p className="complete-percentage">64%</p>
+            <p className="complete-text">Completed</p>
+          </div>
         </div>
-      </div>
-      <div className="column-2">
-        <h1 className="completed">64% Completed</h1>
-      </div>
-      <div className="column-3">
-        <div className="progress">
-          <h3 className="current-chapter">Current Chapter</h3>
-          <h2 className="chapter-no">Chapter 17</h2>
-          <button type="submit" className="progress-button">Update Progress</button>
+        <div className="vertical-line" />
+        <div className="column-3">
+          <div>
+            <h3 className="current-chapter">Current Chapter</h3>
+            <h2 className="chapter-no">Chapter 17</h2>
+          </div>
+          <div>
+            <button type="submit" className="progress-button">Update Progress</button>
+          </div>
         </div>
       </div>
     </div>
