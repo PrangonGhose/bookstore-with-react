@@ -9,12 +9,13 @@ const Main = () => (
       <h1>
         <Link to="/" className="logo">Bookstore CMS</Link>
       </h1>
-      <nav>
-        <ul>
-          <li><Link to="/" className="link">Books</Link></li>
-          <li><Link to="/categories" className="link">Categories</Link></li>
-        </ul>
-      </nav>
+      <ul className="header-list">
+        <li><Link to="/" className="link">Books</Link></li>
+        <li><Link to="/categories" className="link">Categories</Link></li>
+      </ul>
+      <button type="button" className="button-icon">
+        <span className="material-icons">person</span>
+      </button>
     </header>
     <Routes>
       <Route path="/" exact element={<Booklist />} />

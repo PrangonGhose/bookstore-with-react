@@ -14,14 +14,13 @@ const Booklist = () => {
 
   return (
     <div className="bookList">
-      <ul>
-        {bookList.map((book) => (
-          <Book
-            key={book.bookId}
-            book={book}
-          />
-        ))}
-      </ul>
+      {bookList.map((book) => (
+        <Book
+          key={book.bookId}
+          book={book}
+        />
+      ))}
+      <div className="horizontal-line" />
       <BookForm />
     </div>
   );

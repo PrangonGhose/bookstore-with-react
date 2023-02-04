@@ -9,9 +9,9 @@ const Categories = () => {
   const checkCategory = () => dispatch(checkBookCategory());
 
   return (
-    <div>
-      <h1>{category}</h1>
-      <button type="button" onClick={checkCategory}>Check Status</button>
+    <div className="bookList">
+      <h1 className="title">{category}</h1>
+      <button className="progress-button" type="button" onClick={checkCategory}>Check Status</button>
     </div>
   );
 };
