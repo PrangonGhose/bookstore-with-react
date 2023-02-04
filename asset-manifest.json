@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/bookstore-with-react/static/css/main.d0c06f4b.css",
+    "main.js": "/bookstore-with-react/static/js/main.8fe87713.js",
+    "index.html": "/bookstore-with-react/index.html",
+    "main.d0c06f4b.css.map": "/bookstore-with-react/static/css/main.d0c06f4b.css.map",
+    "main.8fe87713.js.map": "/bookstore-with-react/static/js/main.8fe87713.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d0c06f4b.css",
+    "static/js/main.8fe87713.js"
+  ]
+}
