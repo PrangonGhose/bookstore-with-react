@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { RemoveBook } from '../redux/books/books';
+import { deleteBook } from '../redux/books/books';
 
 const Book = (props) => {
   const { book } = props;
@@ -11,7 +11,7 @@ const Book = (props) => {
   const dispatch = useDispatch();
 
   const removeBook = (bookId) => {
-    dispatch(RemoveBook(bookId));
+    dispatch(deleteBook(bookId));
   };
 
   return (
