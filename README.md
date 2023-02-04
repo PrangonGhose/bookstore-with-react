@@ -70,6 +70,8 @@ After you're finished please remove all the comments and instructions!
 - A **Single Page Application** (SPA) created using `React` library.
 - This web application can perform simple calculations and show random quotes.
 - Code is written following **__JSX__** syntax.
+- The web application is maintained using `Redux store`.
+- API calls are made using `Redux Async toolkit` _createAsyncThunk_.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -77,7 +79,7 @@ After you're finished please remove all the comments and instructions!
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-Live demo is currently available.
+Live demo is available [here](https://prangonghose.github.io/bookstore-with-react/).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
