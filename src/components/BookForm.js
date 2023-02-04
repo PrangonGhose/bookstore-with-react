@@ -26,18 +26,20 @@ const BookForm = () => {
   };
 
   return (
-    <form className="form">
+    <section className="form-section">
       <h1 className="newBook">ADD NEW BOOK</h1>
-      <input type="text" name="bookTitle" value={bookName} onChange={(e) => setBookName(e.target.value)} required placeholder="Book Title" />
-      <input type="text" name="bookAuthor" value={bookAuthor} onChange={(e) => setBookAuthor(e.target.value)} required placeholder="Name of the Author" />
-      <select name="bookGenre" className="bookGenreList" value={bookGenre} onChange={(e) => setBookGenre(e.target.value)} required>
-        <option value="Action">Action</option>
-        <option value="Science Fiction">Science Fiction</option>
-        <option value="Economy">Economy</option>
-        <option value="Others">Others</option>
-      </select>
-      <button type="submit" className="bookAddButton" onClick={addBook}>Add Book</button>
-    </form>
+      <form className="form">
+        <input type="text" className="bookTitle" value={bookName} onChange={(e) => setBookName(e.target.value)} placeholder="Book Title" />
+        <input type="text" className="bookAuthor" value={bookAuthor} onChange={(e) => setBookAuthor(e.target.value)} required placeholder="Name of the Author" />
+        <select name="bookGenre" className="bookGenreList" value={bookGenre} onChange={(e) => setBookGenre(e.target.value)}>
+          <option value="Action">Action</option>
+          <option value="Science Fiction">Science Fiction</option>
+          <option value="Economy">Economy</option>
+          <option value="Others">Others</option>
+        </select>
+        <button type="submit" className="bookAddButton" onClick={addBook}>Add Book</button>
+      </form>
+    </section>
   );
 };
 
